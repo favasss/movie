@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6"></div>
+            <img src="{{mypc.img.url}}" width="300" height="300">
+ <div class="col-md-6">
+     <h6>{{mypc.name}}</h6>
+     <h4>{{mypc.desc}}</h4>
+     <h6>{{mypc.year}}</h6>
+     <a class="btn btn-warning" href="{% url 'mypcapp:update' mypc.id %}">update</a>
+     <a class="btn btn-danger" href="{% url 'mypcapp:delete' mypc.id %}">Delete</a>
+
+ </div>
+
+   </div>
+</div>
+
+{% endblock %}
